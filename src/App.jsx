@@ -7,23 +7,26 @@ import Singer from "./Singer";
 import BookList from "./BookList";
 import Book from "./Book";
 import Castomers from "./assets/Castomers";
+import ProductList from "./assets/ProductList";
 
 function App() {
   const actors = ["Sakib", "Manna", "Josim"];
-
+// singers
   const singers = [
     { name: "Mahfuz", age: 30 },
     { name: "Mahfuz", age: 30 },
     { name: "Mahfuz", age: 30 },
     { name: "Mahfuz", age: 30 },
   ];
-
+// books
   const books = [
     { id: 1, name: "Physics", price: 100 },
     { id: 2, name: "Chemistry", price: 120 },
     { id: 3, name: "Math", price: 140 },
     { id: 4, name: "Biology", price: 150 },
   ];
+
+  // castomer
 
   const castomers = [
     {
@@ -53,6 +56,36 @@ function App() {
     },
   ];
 
+  // Products
+
+  const products = [  
+    {  
+        "Product_Id": 1,  
+        "Product_Name": "Wireless Mouse",  
+        "Product_Details": "A smooth and comfortable wireless mouse with USB receiver."  
+    },  
+    {  
+        "Product_Id": 2,  
+        "Product_Name": "Bluetooth Headphones",  
+        "Product_Details": "Over-ear headphones with noise cancellation and 20-hour battery life."  
+    },  
+    {  
+        "Product_Id": 3,  
+        "Product_Name": "Gaming Keyboard",  
+        "Product_Details": "Mechanical keyboard with RGB backlighting and customizable keys."  
+    },  
+    {  
+        "Product_Id": 4,  
+        "Product_Name": "4K Monitor",  
+        "Product_Details": "27-inch 4K UHD monitor with HDR support and 99% sRGB color coverage."  
+    },  
+    {  
+        "Product_Id": 5,  
+        "Product_Name": "Smartphone Stand",  
+        "Product_Details": "Adjustable smartphone stand for hands-free use, compatible with all models."  
+    }  
+]
+
   return (
     <>
       <div>
@@ -69,6 +102,8 @@ function App() {
 
       <BookList books={books}></BookList>
 
+      <ProductList products={products}></ProductList>
+
       {singers.map((singer) => (
         <Singer singer={singer}></Singer>
       ))}
@@ -78,6 +113,7 @@ function App() {
         <Actor name={actor}></Actor>
       ))}
       <Person></Person>
+      
       <Student></Student>
       <div className="task">
         <Todo task="Learn react" isDone={true}></Todo>
