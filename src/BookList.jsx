@@ -20,8 +20,8 @@ import Book from "./Book";
 
 const BookList = ({ books }) => {  
     return (  
-        <div>  
-            <h3>Books: {books.length}</h3> {/* Changed to display the number of books */}  
+        <div className="task">  
+            <h3 className="task">Books: {books.length}</h3> {/* Changed to display the number of books */}  
             {
                 books.map(book=><Book book={book}></Book>)
             }
